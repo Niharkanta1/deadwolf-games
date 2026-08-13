@@ -10,28 +10,27 @@ interface YouTubeVideo {
 // Sample YouTube videos - Replace these with actual video IDs
 const gamedevVideos: YouTubeVideo[] = [
   {
-    id: "jNgP6d9HraI",
-    title: "Introduction to Game Development",
+    id: "f47j_8i-jnQ",
+    title: "Grayboxing in my Platformer Game",
     description:
-      "Learn the basics of indie game development and our journey at Deadwolf Games.",
+      "The basics of grayboxing and how it helps in designing levels for platformer games.",
   },
   {
-    id: "dQw4w9WgXcQ",
-    title: "Pixel Art Techniques",
+    id: "9zSs4WP6rEk",
+    title: "Procedural Generation Techniques",
     description:
-      "Explore our unique pixel art style and the tools we use to create stunning visuals.",
+      "Discover the techniques we use to generate unique and engaging game content.",
   },
   {
-    id: "jNgP6d9HraI",
-    title: "Game Mechanics Deep Dive",
-    description:
-      "Understanding the mechanics that make our games engaging and fun to play.",
+    id: "HtJsd0oMhU0",
+    title: "A 3d Car Racing Demo",
+    description: "Check out our latest 3D car racing demo, showcasing physics",
   },
   {
-    id: "dQw4w9WgXcQ",
-    title: "Behind the Scenes",
+    id: "u1dJeHZXUiQ",
+    title: "How We Create Game Characters",
     description:
-      "Get an inside look at our development process and studio workflow.",
+      "A behind-the-scenes look at our character design process, from concept art to final in-game models.",
   },
 ];
 

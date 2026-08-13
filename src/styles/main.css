@@ -65,6 +65,14 @@ body {
     transition: transform 0.3s ease;
 }
 
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
 .logo:hover {
     transform: scale(1.05);
 }
@@ -133,7 +141,6 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
-    min-height: 500px;
 }
 
 .hero-video video {
@@ -367,6 +374,7 @@ body {
 
 .contact-map {
     border-radius: 10px;
+    border: 2px solid var(--accent-color);
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
