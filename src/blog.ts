@@ -184,6 +184,7 @@ function showBlogPost(post: BlogPost): void {
   const postContainer = document.createElement("div");
   postContainer.className = "blog-modal-container";
 
+  // Create header with close button
   const headerDiv = document.createElement("div");
   headerDiv.className = "blog-modal-header";
 
@@ -191,8 +192,11 @@ function showBlogPost(post: BlogPost): void {
   closeBtn.className = "blog-modal-close";
   closeBtn.textContent = "✕ Close";
 
+  headerDiv.appendChild(closeBtn);
+
+  // Create content div
   const contentDiv = document.createElement("div");
-  contentDiv.style.width = "100%";
+  contentDiv.className = "blog-modal-content";
 
   contentDiv.innerHTML = `
     <article class="blog-post">
@@ -209,9 +213,8 @@ function showBlogPost(post: BlogPost): void {
     </article>
   `;
 
-  headerDiv.appendChild(contentDiv);
-  headerDiv.appendChild(closeBtn);
   postContainer.appendChild(headerDiv);
+  postContainer.appendChild(contentDiv);
   modal.appendChild(postContainer);
   container.appendChild(modal);
 
