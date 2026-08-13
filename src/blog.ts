@@ -179,42 +179,22 @@ function showBlogPost(post: BlogPost): void {
 
   // Create modal overlay
   const modal = document.createElement("div");
-  modal.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    overflow-y: auto;
-  `;
+  modal.className = "blog-modal-overlay";
 
   const postContainer = document.createElement("div");
-  postContainer.style.cssText = `
-    background: white;
-    border-radius: 10px;
-    padding: 40px;
-    max-width: 800px;
-    width: 90%;
-    margin: 40px auto;
-  `;
+  postContainer.className = "blog-modal-container";
 
-  postContainer.innerHTML = `
-    <button id="closeModal" style="
-      float: right;
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-    ">✕ Close</button>
+  const headerDiv = document.createElement("div");
+  headerDiv.className = "blog-modal-header";
 
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "blog-modal-close";
+  closeBtn.textContent = "✕ Close";
+
+  const contentDiv = document.createElement("div");
+  contentDiv.style.width = "100%";
+
+  contentDiv.innerHTML = `
     <article class="blog-post">
       <div class="blog-post-header">
         <span style="font-size: 3rem; display: block; margin-bottom: 20px;">${post.icon}</span>
@@ -229,16 +209,16 @@ function showBlogPost(post: BlogPost): void {
     </article>
   `;
 
+  headerDiv.appendChild(contentDiv);
+  headerDiv.appendChild(closeBtn);
+  postContainer.appendChild(headerDiv);
   modal.appendChild(postContainer);
   container.appendChild(modal);
 
   // Close modal
-  const closeBtn = modal.querySelector("#closeModal");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      modal.remove();
-    });
-  }
+  closeBtn.addEventListener("click", () => {
+    modal.remove();
+  });
 
   // Close on outside click
   modal.addEventListener("click", (e) => {
