@@ -10,5 +10,5 @@ export default defineConfig({
     sourcemap: false,
     minify: "terser",
   },
-  base: '/deadwolf-games/',
+  base: "/deadwolf-games/",
 });
