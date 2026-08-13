@@ -17,5 +17,5 @@ export default defineConfig({
       },
     },
   },
-  base: "/deadwolf-games/",
+  base: "/",
 });
