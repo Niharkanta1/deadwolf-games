@@ -10,6 +10,5 @@ export default defineConfig({
     sourcemap: false,
     minify: "terser",
   },
-  // Uncomment for GitHub Pages deployment
-  // base: '/deadwolf-games/',
+  base: '/deadwolf-games/',
 });
