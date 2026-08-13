@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
   server: {
@@ -9,6 +10,12 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: false,
     minify: "terser",
+    rollupOptions: {
+      input: {
+        main: resolve(import.meta.dirname, "index.html"),
+        blog: resolve(import.meta.dirname, "blog.html"),
+      },
+    },
   },
   base: "/deadwolf-games/",
 });
