@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "first-game-journey",
+      "title": "The Journey of Creating Our First Game",
+      "date": "2024-12-15",
+      "excerpt": "An in-depth look at the challenges and triumphs of developing our first indie game title.",
+      "category": "Development",
+      "icon": "🎮",
+      "contentFile": "001-first-game-journey.md",
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": 2,
+      "slug": "pixel-art-techniques",
+      "title": "Mastering Pixel Art: Our Techniques and Tools",
+      "date": "2024-12-08",
+      "excerpt": "Discover the tools, techniques, and philosophy behind creating beautiful pixel art.",
+      "category": "Art",
+      "icon": "🎨",
+      "contentFile": "002-pixel-art-techniques.md",
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": 3,
+      "slug": "game-mechanics",
+      "title": "Game Mechanics That Keep Players Engaged",
+      "date": "2024-11-30",
+      "excerpt": "Exploring the core mechanics that make indie games addictive and fun.",
+      "category": "Game Design",
+      "icon": "⚙️",
+      "contentFile": "003-game-mechanics.md",
+      "featured": false,
+      "published": true
+    }
+  ]
+}
